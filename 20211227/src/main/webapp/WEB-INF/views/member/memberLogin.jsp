@@ -7,7 +7,6 @@
 <title>회원 로그인</title>
 </head>
 <body>
-<jsp:include page="../home/menu.jsp"/>
 <div align="center">
 	<div><h1>${message }</h1></div>
 </div>

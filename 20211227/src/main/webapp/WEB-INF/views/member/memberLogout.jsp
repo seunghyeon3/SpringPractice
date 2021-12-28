@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="../home/menu.jsp"/>
 <div align="center">
 	<div><h3>${message }</h3></div>
 </div>

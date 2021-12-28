@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<jsp:include page="menu.jsp"/>
 <div align="center">
 	<h1>Well Come To My Home </h1>	
 </div>

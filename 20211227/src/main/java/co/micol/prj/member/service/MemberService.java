@@ -15,4 +15,6 @@ public interface MemberService {
 	int memberUpdate(MemberVO member);
 
 	boolean isIdCheck(String id);
+	
+	List<MemberVO> memberSearch(String key, String data);
 }

@@ -8,7 +8,7 @@
 	<select id="memberSelect"
 		parameterType="co.micol.prj.member.service.MemberVO"
 		resultType="co.micol.prj.member.service.MemberVO">
-		SELECT * FROM MEMBER WHERE = #{id}
+		SELECT * FROM MEMBER WHERE ID = #{id}
 		<if test="password != null">
 			AND PASSWORD = #{password}
 		</if>
@@ -56,5 +56,23 @@
 		resultType="boolean">
 		SELECT CASE WHEN COUNT(*)=1 THEN 0 ELSE 1 END AS ID
 		FROM MEMBER WHERE ID = #{id};
+	</select>
+	
+	<select id="memberSearch" resultType="co.micol.prj.member.service.MemberVO">
+	SELECT * FROM MEMBER
+	WHERE
+	<if test="key == null">
+	1 = 1
+	</if>
+	<if test="key == 'name'">
+	NAME LIKE '%'|| #{data} ||'%' 
+	</if>
+	<if test="key == 'tel'">
+	TEL LIKE '%'|| #{data} ||'%'
+	</if>
+	<if test="key == 'address'">
+	ADDRESS LIKE '%'|| #{data} ||'%'
+	</if>
+	
 	</select>
 </mapper>
